@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Award Studios - News</title>
+  <link rel="icon" type="image/png" href="icon.png">
+  <meta name="description" content="Award Studios - Official News Page">
+  <style>
+    body { 
+      background-color: black; 
+      color: white; 
+      font-family: 'Courier New', Courier, monospace; 
+      margin: 0;
+      font-size: 18px;
+    }
+    header {
+      background-color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    header h1 {
+      font-family: Georgia, serif;
+      margin: 0;
+      font-size: 34px;
+    }
+    header a {
+      color: #0af;
+      text-decoration: none;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 16px;
+    }
+    .content {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    h2 {
+      font-family: Georgia, serif;
+      border-bottom: 1px solid #444;
+      padding-bottom: 5px;
+      font-size: 26px;
+    }
+    article {
+      margin-bottom: 40px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 20px;
+    }
+    article h3 {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    article p.short {
+      font-style: italic;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+    article img {
+      max-width: 100%;
+      margin: 10px 0;
+      border: 1px solid #444;
+    }
+    article p.long {
+      line-height: 1.6;
+    }
+    footer {
+      background:#111; 
+      color:#aaa; 
+      text-align:center; 
+      padding:10px; 
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header con enlace para volver al Index -->
+  <header>
+    <h1>News</h1>
+    <a href="index.html">← Back to Index</a>
+  </header>
+
+  <!-- Contenido principal -->
+  <div class="content">
+    <h2>Latest Updates</h2>
+
+    <!-- Ejemplo de noticia -->
+    <article>
+      <h3>Operation Thunder Advances</h3>
+      <p class="short">Core mechanics finalized, narrative integration underway.</p>
+      <img src="news1.jpeg" alt="Operation Thunder progress">
+      <p class="long">
+        Award Studios announces significant progress in Operation Thunder, our flagship retro FPS/RPG project. 
+        The development team has finalized core mechanics and is now focusing on narrative integration and visual polish. 
+        Stakeholders can expect a detailed devlog in the coming weeks.
+      </p>
+    </article>
+
+    <!-- Repite hasta 12 noticias -->
+    <article>
+      <h3>Preservation Initiative Expanded</h3>
+      <p class="short">Classic titles from the late 90s added.</p>
+      <img src="news2.jpeg" alt="Preservation project expansion">
+      <p class="long">
+        Our preservation program has expanded to include additional classic titles from the late 90s. 
+        These works are being restored with fidelity to their original design, ensuring that future generations 
+        can experience them as intended. More details will be shared in our upcoming archival report.
+      </p>
+    </article>
+
+    <!-- ... hasta 12 artículos -->
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    Award Studios · Official Website · 2026
+  </footer>
+</body>
+</html>
