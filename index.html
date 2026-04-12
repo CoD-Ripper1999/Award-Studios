@@ -45,6 +45,9 @@
       margin: 0;
       border: 1px solid #444;
       width: 180px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
     }
     nav ul li {
       border-bottom: 1px solid #555;
@@ -62,8 +65,10 @@
     nav ul li a:hover {
       background-color: #333;
     }
-    nav:hover ul {
+    nav ul.show {
       display: block;
+      max-height: 500px; /* suficiente para mostrar todos los items */
+      transition: max-height 0.3s ease-in;
     }
     .banner {
       text-align: center;
@@ -140,8 +145,9 @@
     Award Studios · Official Website · 2026
   </footer>
 
-  <!-- Script carrusel -->
+  <!-- Script carrusel y menú -->
   <script>
+    // Carrusel de banners
     const images = ["banner1.jpeg", "banner2.jpeg"];
     let index = 0;
     function changeImage() {
@@ -154,6 +160,28 @@
       }, 1000);
     }
     setInterval(changeImage, 10000);
+
+    // Menú con animación y cierre automático
+    const icon = document.querySelector('header img.icon');
+    const menu = document.querySelector('nav ul');
+    let inactivityTimer;
+
+    icon.addEventListener('click', () => {
+      menu.classList.toggle('show');
+      clearTimeout(inactivityTimer);
+      if (menu.classList.contains('show')) {
+        inactivityTimer = setTimeout(() => {
+          menu.classList.remove('show');
+        }, 12000); // 12 segundos
+      }
+    });
+
+    menu.addEventListener('mouseover', () => {
+      clearTimeout(inactivityTimer);
+      inactivityTimer = setTimeout(() => {
+        menu.classList.remove('show');
+      }, 12000);
+    });
   </script>
 </body>
 </html>
