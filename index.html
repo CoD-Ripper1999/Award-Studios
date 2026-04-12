@@ -1,25 +1,103 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Award Studios</title>
   <style>
-    body { background-color: black; color: white; font-family: Georgia, sans-serif; }
-    header { text-align: center; padding: 20px; }
-    h1 { font-size: 2.5em; }
-    .content { max-width: 800px; margin: auto; padding: 20px; }
-    img { max-width: 100%; margin: 20px 0; }
+    body { 
+      background-color: black; 
+      color: white; 
+      font-family: Georgia, sans-serif; 
+      margin: 0;
+    }
+    header {
+      background-color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    header img.icon {
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+    }
+    nav {
+      position: relative;
+      display: inline-block;
+    }
+    nav ul {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: #222;
+      list-style: none;
+      padding: 10px;
+      margin: 0;
+      border: 1px solid #444;
+    }
+    nav ul li {
+      padding: 5px 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    nav:hover ul {
+      display: block;
+    }
+    .banner {
+      text-align: center;
+    }
+    .banner img {
+      max-width: 100%;
+    }
+    .content {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    h2 {
+      border-bottom: 1px solid #444;
+      padding-bottom: 5px;
+    }
   </style>
 </head>
 <body>
+  <!-- Main Header con icono y menú -->
   <header>
-    <img src="banner.jpeg" alt="Award Studios Banner">
-    <h1>Operation Thunder</h1>
+    <h1>Award Studios</h1>
+    <nav>
+      <img src="icon.png" alt="Menu Icon" class="icon">
+      <ul>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact & Support</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
   </header>
+
+  <!-- Banner -->
+  <div class="banner">
+    <img src="banner.jpeg" alt="Award Studios Banner">
+  </div>
+
+  <!-- Secciones con títulos -->
   <div class="content">
-    <p>News, projects, and updates from our studio.</p>
-    <img src="operation-thunder.jpg" alt="Operation Thunder">
+    <section id="news">
+      <h2>News</h2>
+      <p>Latest updates and announcements from Award Studios.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact & Support</h2>
+      <p>For inquiries, reach us at: support.awardstudios@gmail.com</p>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>Award Studios is dedicated to preserving gaming history and creating retro-inspired experiences.</p>
+    </section>
   </div>
 </body>
 </html>
